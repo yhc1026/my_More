@@ -8,7 +8,7 @@ import pandas as pd
 import torch
 from pathlib import Path
 
-from my_MoRE.my_MoRE.my_src.model.Base.data.my_HateMM_base import HateMM_Dataset
+from my_src.model.Base.data .my_HateMM_base import HateMM_Dataset
 
 
 class HateMM_MoRE_Dataset(HateMM_Dataset):  #继承HateMM_Dataset
@@ -17,8 +17,8 @@ class HateMM_MoRE_Dataset(HateMM_Dataset):  #继承HateMM_Dataset
         super(HateMM_MoRE_Dataset, self).__init__()
 
         # 使用绝对路径
-        fea_path = Path(r"D:\codeC\my_MoRE\my_MoRE\data\HateMM\fea")
-        sim_path = Path(r"D:\codeC\my_MoRE\my_MoRE\data\HateMM\retrieval")
+        fea_path = Path(r"D:\code\LAB\my_MoRE\data\HateMM\fea")
+        sim_path = Path(r"D:\code\LAB\my_MoRE\data\HateMM\retrieval")
 
         self.data = self._get_data(fold, split, task)
 
